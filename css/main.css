@@ -207,7 +207,7 @@ a {
     text-decoration: none;
 }
 
-.myLink:hover {
+.myLink: hover {
     text-decoration: underline;
     color: seagreen
     
@@ -218,7 +218,11 @@ a {
   border-style: solid;
 }
 
-
+.border-left {
+  border-left: 1px solid #ccc;
+}
+    
+        
 
 
 

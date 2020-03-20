@@ -161,13 +161,94 @@ img {
 .container{
     clear: both;
   display: grid;
-  grid-template-rows: auto 400px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px auto auto auto auto auto auto;
+  grid-template-columns: 5fr 3fr 2fr;
 grid-template-areas: 
-    "pic pic pic"
-    "pic pic pic"
-    "topleft topleft topright"
-    "main main main";
+"pic pic pic"
+"ratfav ratfav menukey"
+"burgers burgers options"
+"quesdillas tacos tacos"
+"salad salad subs"
+"combos combos combos"
+"specials specials specials"
+}
+
+/*.ratfav {
+    grid-area: ratfav;
+    background-color: bisque;
+}*/
+
+   .ratfav{
+        grid-area: ratfav;
+       grid-column: col 3 / span 2;
+        grid-row: row 2;
+        display: grid;
+    grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+       background-color: aqua;
+    }
+
+    .e {
+        grid-column: 1 / 3;
+        grid-row: 1;
+        background-color: blue;
+    }
+
+    .f {
+        grid-column: 1;
+        grid-row: 2;
+        background-color: green;
+    }
+
+    .g {
+        grid-column: 2;
+        grid-row: 2;
+        background-color: blueviolet;
+    }
+
+.menukey {
+    grid-area: menukey;
+    background-color: aqua;
+}
+
+.burgers {
+    grid-area: burgers;
+    background-color: orange;
+}
+
+.options {
+    grid-area: options;
+    background-color: orangered;
+}
+
+.quesdillas {
+    grid-area: quesdillas;
+    background-color: purple;
+}
+
+.tacos {
+    grid-area: tacos;
+    background-color: yellow;
+}
+
+.salad {
+    grid-area: salad;
+    background-color: greenyellow;
+}
+
+.subs {
+    grid-area: subs;
+    background-color: azure;
+}
+
+.combos {
+    grid-area: combos;
+    background-color: brown;
+}
+
+.specials {
+    grid-area: specials;
+    background-color: salmon;
 }
 
 footer{
@@ -203,6 +284,9 @@ a {
   border-style: solid;
 }
 
+.border-left {
+  border-left: 1px solid #ccc;
+}
 
 
 
