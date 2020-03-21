@@ -7,12 +7,17 @@ body {
 h1{
     font-family: 'Noto Serif', serif;
     text-align: center;
+    color: rgb(244, 115, 33);
     text-decoration: underline;
 }
 
 h2 {
     text-align: center;
     font-family: 'Noto Serif', serif;
+}
+
+.center{
+    text-align: center;
 }
 
 .navcontainer {
@@ -70,52 +75,13 @@ img {
 }
   
 /* GRID LAYOUT */
-.top-left-home{
-    grid-area: topleft;
-    background-image: url("../img/IMG_8353.png");
-    background-size: cover;
-    background-position: center center;
-        
-}
 
-.top-right-home{
-    grid-area: topright;
-    background-color: ghostwhite;
-    font-family: 'Noto Serif', serif;
-    font-family: 'Open Sans', sans-serif;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
-
-
-.main-home {
-    grid-area: main;
-    background-image: url("../img/IMG_8284.png");
-    background-size: cover;
-    background-position: center center;
-    text-align: center;
-    color: white;
-    padding-top: 100px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-family: 'Noto Serif', serif;
-    font-size: 35px;
-}
 
             /* Food */
-    
-.top-left-food{
-    grid-area: topleft;
-    background-image: url("../img/IMG_8275.png");
-    background-size: cover;
-    background-position: center center;
-        
-}
 
-.main-food {
-    grid-area: main;
-    background-image: url("../img/IMG_8284.png");
+.pic {
+    grid-area: pic;
+    background-image: url("../img/IMG_8251.png");
     background-size: cover;
     background-position: center center;
     text-align: center;
@@ -125,19 +91,7 @@ img {
     padding-right: 50px;
     font-family: 'Noto Serif', serif;
     font-size: 35px;
-    
 }
-
-.top-right-food{
-    grid-area: topright;
-    background-color: ghostwhite;
-    font-family: 'Noto Serif', serif;
-    font-family: 'Open Sans', sans-serif;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
-
 
 
 
@@ -176,15 +130,116 @@ img {
       
 }
 
+
+
 .container{
     clear: both;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
   display: grid;
-  grid-template-rows: auto 600px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px auto auto auto auto auto auto;
+  grid-template-columns: 5fr 3fr 2fr;
 grid-template-areas: 
-    "topleft topleft topright"
-    "main main main";
+"pic pic pic"
+"bottle bottle happyh"
+    "tap tap wine"
+"quesdillas tacos tacos"
+"salad salad salad"
+"combos combos combos"
+"specials specials specials"
 }
+
+/*.ratfav {
+    grid-area: ratfav;
+    background-color: bisque;
+}*/
+
+
+
+.happyh {
+    grid-area: happyh;
+    background-color: #005030;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tap {
+    grid-area: tap;
+    background-color: #005030;
+      
+  display: grid;
+  grid-row: auto;
+
+grid-gap: 0px;
+  grid-template-columns: 1fr 1fr;
+ 
+}
+
+.b {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  background-color: #005030;
+}
+
+.c {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #005030;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.d {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #005030;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+.wine {
+    grid-area: wine;
+    background-color: #005030;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.bottle{
+  grid-area: bottle;
+  display: grid;
+  grid-row: auto;
+
+grid-gap: 0px;
+  grid-template-columns: 1fr 1fr;
+ background-color: #005030;
+}
+
+.e {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  background-color: #005030;
+}
+
+.f {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #005030;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.g {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #005030;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
 
 footer{
   display: grid;
@@ -197,9 +252,6 @@ footer{
     font-family: 'Open Sans', sans-serif;
     
 }
-
-
-
 
 
 
@@ -222,13 +274,37 @@ a {
 .border-left {
   border-left: 1px solid #ccc;
 }
-    
-        
 
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+}
+
+.border-top
+{
+  border-top: 1px solid #ccc;
+}
 
 
 
 /* MOBILE EDITS WHEN MINIMIZED */
+@media only screen and (max-width: 600px) {
+  .container{
+  grid-template-rows: 300px auto auto auto auto auto auto;
+  grid-template-columns: 5fr 3fr 2fr;
+grid-template-areas: 
+"pic pic pic"
+"ratfav ratfav ratfav"
+"menukey menukey menukey"
+"burgers burgers burgers"
+    "options options options"
+"quesdillas quesdillas quesdillas"
+    "tacos tacos tacos"
+"salad salad salad"
+"combos combos combos"
+"specials specials specials"
+
+}
+}
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {

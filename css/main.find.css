@@ -15,6 +15,7 @@ h2 {
     font-family: 'Noto Serif', serif;
 }
 
+
 .navcontainer {
     max-width: 600px;
     float: right;
@@ -70,52 +71,13 @@ img {
 }
   
 /* GRID LAYOUT */
-.top-left-home{
-    grid-area: topleft;
-    background-image: url("../img/IMG_8353.png");
-    background-size: cover;
-    background-position: center center;
-        
-}
 
-.top-right-home{
-    grid-area: topright;
-    background-color: ghostwhite;
-    font-family: 'Noto Serif', serif;
-    font-family: 'Open Sans', sans-serif;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
-
-
-.main-home {
-    grid-area: main;
-    background-image: url("../img/IMG_8284.png");
-    background-size: cover;
-    background-position: center center;
-    text-align: center;
-    color: white;
-    padding-top: 100px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-family: 'Noto Serif', serif;
-    font-size: 35px;
-}
 
             /* Food */
-    
-.top-left-food{
-    grid-area: topleft;
-    background-image: url("../img/IMG_8275.png");
-    background-size: cover;
-    background-position: center center;
-        
-}
 
-.main-food {
-    grid-area: main;
-    background-image: url("../img/IMG_8284.png");
+.pic {
+    grid-area: pic;
+    background-image: url("../img/IMG_8313.png");
     background-size: cover;
     background-position: center center;
     text-align: center;
@@ -125,18 +87,9 @@ img {
     padding-right: 50px;
     font-family: 'Noto Serif', serif;
     font-size: 35px;
+}
     
-}
 
-.top-right-food{
-    grid-area: topright;
-    background-color: ghostwhite;
-    font-family: 'Noto Serif', serif;
-    font-family: 'Open Sans', sans-serif;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
 
 
 
@@ -179,12 +132,23 @@ img {
 .container{
     clear: both;
   display: grid;
-  grid-template-rows: auto 600px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px auto auto auto auto auto auto;
+  grid-template-columns: 5fr 3fr 2fr;
 grid-template-areas: 
-    "topleft topleft topright"
-    "main main main";
+"pic pic pic"
+"ratfav ratfav ratfav"
+"burgers burgers options"
+"quesdillas tacos tacos"
+"salad salad subs"
+"combos combos combos"
+"specials specials specials"
 }
+
+.ratfav {
+    grid-area: ratfav;  
+}
+
+  
 
 footer{
   display: grid;
@@ -197,11 +161,6 @@ footer{
     font-family: 'Open Sans', sans-serif;
     
 }
-
-
-
-
-
 
 a {
     color: #000000;
@@ -222,8 +181,7 @@ a {
 .border-left {
   border-left: 1px solid #ccc;
 }
-    
-        
+
 
 
 
