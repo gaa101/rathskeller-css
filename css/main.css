@@ -23,7 +23,7 @@ h2 {
 }
 
   .topnav {
-    overflow: visible;
+    overflow: hidden;
     background-color: #333;
   }
 
@@ -175,11 +175,11 @@ img {
     text-align: center;
       
 }
-
+/* change to auto? */
 .container{
     clear: both;
   display: grid;
-  grid-template-rows: auto 600px;
+  grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr 1fr;
 grid-template-areas: 
     "topleft topleft topright"
@@ -253,6 +253,25 @@ a {
 
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
   @media screen and (max-width: 600px) {
+      .main-home {
+          font-size: 15px;
+          text-align-last: center;
+          padding: 30px;
+      }
+  footer{
+    display: grid;
+    grid-template-rows:  auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "follow"
+      "navigation" 
+      "hours" 
+      "contact";   
+  }
+       .topnav{
+          background-color: rgb(244, 115, 33);
+      } 
+    .topnav a:first-child {display: none;}
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
@@ -263,5 +282,6 @@ a {
       float: none;
       display: block;
       text-align: left;
+         
     }
   }
