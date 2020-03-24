@@ -68,8 +68,7 @@ header {
   background-color: rgb(244, 115, 33);
 }
 
-/* fix this tag!!!!!!! */
-img {
+.imglogo {
   width: 25%;
   height: auto;
 }
@@ -86,7 +85,7 @@ img {
     background-position: center center;
     text-align: center;
     color: white;
-    padding-top: 100px;
+    padding-top: 130px;
     padding-left: 50px;
     padding-right: 50px;
     font-family: 'Noto Serif', serif;
@@ -158,11 +157,13 @@ img {
     padding-bottom: 10px;
 }
 
-.button {
+
+.button{
     display: block;
-    text-align: center;
-      
-}
+      margin-left: auto;
+  margin-right: auto;
+          width: 60px;
+      }
 
 
 
@@ -330,46 +331,55 @@ grid-gap: 0px;
 }
 
 .n1 {
-  grid-column: 1/6 ;
-  grid-row: 1;
+    grid-area: n1;
+  
   background-color: #005030;
 }
 
 .n {
-  grid-column: 1 ;
-  grid-row: 2;
+    grid-area: n;
+
+  
   background-color: #005030;
     padding: 20px;
+      
 }
 
 .o {
-  grid-column: 2;
-  grid-row: 2;
+    grid-area: o;
+  
+  
   background-color: #005030;
     padding: 20px;
+         
 }
 
 .p {
-  grid-column: 3;
-  grid-row: 2;
+    grid-area: p;
+ 
+
   background-color: #005030;
     padding: 20px;
+          
 }
 
 .q {
-  grid-column: 4;
-  grid-row: 2;
+    grid-area: q;
+
+  
   background-color: #005030;
     padding: 20px;
+         
 }
 
 .r {
-  grid-column: 5;
-  grid-row: 2;
+    grid-area: r;
+ 
   background-color: #005030;
     padding: 20px;
     
 }
+
 
 
 .ratfav{
@@ -405,7 +415,14 @@ grid-gap: 0px;
     font-family: 'Open Sans', sans-serif;
 }
 
-
+.specials{
+    display: grid;
+    grid-template-rows:  auto auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      "n1 n1 n1 n1 n1"
+      "n o p q r";   
+  } 
 
 footer{
   display: grid;
@@ -496,7 +513,14 @@ grid-template-areas:
 
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
   @media screen and (max-width: 600px) {
- /*    specials{
+     .imglogo {
+  width: 50%;
+  height: auto;
+          display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+      .specials{
     display: grid;
     grid-template-rows:  auto auto auto auto auto auto;
     grid-template-columns: 1fr;
@@ -507,8 +531,14 @@ grid-template-areas:
       "p"
       "q"
       "r";   
-  } */
+  } 
       
+.button{
+    display: block;
+      margin-left: auto;
+  margin-right: auto;
+          width: 60px;
+      }
         footer{
     display: grid;
     grid-template-rows:  auto auto auto auto;
@@ -520,7 +550,7 @@ grid-template-areas:
       "contact";   
   }
       .topnav{
-          background-color: rgb(244, 115, 33);
+          background-color: #333;
       }  
     .topnav a:first-child {display: none;}
     .topnav.responsive {position: relative;}

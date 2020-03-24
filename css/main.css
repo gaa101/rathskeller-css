@@ -63,22 +63,26 @@ header {
   background-color: rgb(244, 115, 33);
 }
 
-/* fix this tag!!!!!!! */
-img {
+
+.imglogo {
   width: 25%;
   height: auto;
 }
   
 /* GRID LAYOUT */
-.top-left-home{
+.top-left{
     grid-area: topleft;
     background-image: url("../img/IMG_8353.png");
     background-size: cover;
     background-position: center center;
+     padding-top: 130px;
+    padding-left: 50px;
+    padding-right: 50px;
         
 }
 
-.top-right-home{
+
+.top-right{
     grid-area: topright;
     background-color: ghostwhite;
     font-family: 'Noto Serif', serif;
@@ -89,16 +93,15 @@ img {
 }
 
 
-.main-home {
+.main {
     grid-area: main;
     background-image: url("../img/IMG_8284.png");
     background-size: cover;
     background-position: center center;
     text-align: center;
     color: white;
-    padding-top: 100px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 50px;
+    
     font-family: 'Noto Serif', serif;
     font-size: 35px;
 }
@@ -170,12 +173,14 @@ img {
     padding-bottom: 10px;
 }
 
-.button {
+
+.button{
     display: block;
-    text-align: center;
-      
-}
-/* change to auto? */
+      margin-left: auto;
+  margin-right: auto;
+          width: 60px;
+      }
+
 .container{
     clear: both;
   display: grid;
@@ -253,11 +258,43 @@ a {
 
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
   @media screen and (max-width: 600px) {
-      .main-home {
+      .imglogo {
+  width: 50%;
+  height: auto;
+          display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+      .top-left{
+    grid-area: topleft;
+    background-image: url("../img/IMG_8353.png");
+    background-size: cover;
+    background-position: center center;
+     padding: 30%;
+        
+}
+      
+      .main {
           font-size: 15px;
           text-align-last: center;
           padding: 30px;
       }
+      .container{
+          display: grid;
+    grid-template-rows:  auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "topleft"
+      "topright" 
+      "main";  
+      }
+      .button{
+    display: block;
+      margin-left: auto;
+  margin-right: auto;
+          width: 60px;
+      }
+    
   footer{
     display: grid;
     grid-template-rows:  auto auto auto auto;
@@ -269,7 +306,7 @@ a {
       "contact";   
   }
        .topnav{
-          background-color: rgb(244, 115, 33);
+          background-color: #333;
       } 
     .topnav a:first-child {display: none;}
     .topnav.responsive {position: relative;}
